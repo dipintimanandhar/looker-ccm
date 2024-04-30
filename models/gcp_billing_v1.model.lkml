@@ -1,4 +1,4 @@
-connection: "UPDATE"
+connection: "billing-connection"
 label: "Google Cloud Billing"
 persist_with: daily_datagroup
 include: "/datagroups/datagroup.lkml"

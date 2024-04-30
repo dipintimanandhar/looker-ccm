@@ -1,10 +1,10 @@
 include: "/views/*.view.lkml"
- 
+
 
 view: +gcp_billing_export {
 ##################### Category Reporting Metrics #####################
 #Add additional fields to allowed value in Category field and an additional elsif in the Category Selected field to pivot different metrics
- 
+
 
 parameter: category {
   label: "Category"
@@ -24,15 +24,15 @@ parameter: category {
   }
 }
 
-dimension: category_selected {
-  view_label: "Category Picker"
- sql:
-    {% if category._parameter_value == 'service_description' %} ${service__description}
-    {% elsif category._parameter_value == 'project_id' %} ${project_id}
-    {% elsif category._parameter_value == 'location__region' %} ${location__region}
-    {% else %} ${service__description}
-    {% endif %} ;;
-}
+# dimension: category_selected {
+#   view_label: "Category Picker"
+# sql:
+#     {% if category._parameter_value == 'service_description' %} ${service__description}
+#     {% elsif category._parameter_value == 'project_id' %} ${project_id}
+#     {% elsif category._parameter_value == 'location__region' %} ${location__region}
+#     {% else %} ${service__description}
+#     {% endif %} ;;
+# }
 
 parameter: date_selection {
   type: unquoted

@@ -1,5 +1,5 @@
 - dashboard: cost_optimization_recommendations
-  title: Cost Optimization Recommendations
+  title: Cost Optimization Recommendations V2
   layout: newspaper
   preferred_viewer: dashboards-next
   elements:

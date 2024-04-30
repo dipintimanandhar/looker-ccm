@@ -1,5 +1,5 @@
 - dashboard: gke_insights_
-  title: 'GKE Insights V1'
+  title: 'GKE Insights V2'
   layout: newspaper
   preferred_viewer: dashboards-next
   description: ''

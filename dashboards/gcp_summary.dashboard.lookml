@@ -1,5 +1,5 @@
 - dashboard: gcp_summary
-  title: GCP Summary V1
+  title: GCP Summary V2
   layout: newspaper
   preferred_viewer: dashboards-next
   description: ''
@@ -812,7 +812,7 @@
     defaults_version: 1
     hidden_fields: [4_week_moving_average]
     hidden_pivots: {}
-    listen: 
+    listen:
       Service Type: gcp_billing_export.service__description
       Is Marketplace Purchase? (Yes / No): pricing_mapping.marketplace_purchase
     row: 18

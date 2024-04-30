@@ -1,5 +1,5 @@
 - dashboard: compute_engine_insights
-  title: Compute Engine Insights 
+  title: Compute Engine Insights V2
   layout: newspaper
   preferred_viewer: dashboards-next
   description: ''

@@ -1,8 +1,8 @@
-### Need the BigQuery Transfer API enabled in order to view this data 
+### Need the BigQuery Transfer API enabled in order to view this data
 view: recommendations_export {
   sql_table_name: @{RECOMMENDATION_TABLE};;
 
- 
+
 
   dimension_group: _partitiondate {
     hidden: yes
@@ -19,7 +19,7 @@ view: recommendations_export {
     datatype: date
     sql: ${TABLE}._PARTITIONDATE ;;
   }
- 
+
   dimension_group: _partitiontime {
     hidden: yes
     type: time
@@ -36,7 +36,7 @@ view: recommendations_export {
     sql: ${TABLE}._PARTITIONTIME ;;
   }
 
- 
+
 
   dimension: ancestors__organization_id {
 
@@ -52,7 +52,7 @@ view: recommendations_export {
 
   }
 
- 
+
 
   dimension: associated_insights {
 
@@ -62,7 +62,7 @@ view: recommendations_export {
 
   }
 
- 
+
 
   dimension: cloud_entity_id {
 
@@ -74,7 +74,7 @@ view: recommendations_export {
 
   }
 
- 
+
 
   dimension: cloud_entity_type {
 
@@ -86,7 +86,7 @@ view: recommendations_export {
 
   }
 
- 
+
 
   dimension: description {
 
@@ -100,7 +100,7 @@ view: recommendations_export {
 
   }
 
- 
+
 
   dimension_group: last_refresh {
 
@@ -130,7 +130,7 @@ view: recommendations_export {
 
   }
 
- 
+
 
   dimension: location {
 
@@ -142,7 +142,7 @@ view: recommendations_export {
 
   }
 
- 
+
 
   dimension: name {
 
@@ -156,7 +156,7 @@ view: recommendations_export {
 
   }
 
- 
+
 
   dimension: primary_impact__category {
 
@@ -190,7 +190,7 @@ view: recommendations_export {
 
   }
 
- 
+
 
   dimension: primary_impact__cost_projection__cost__currency_code {
 
@@ -206,7 +206,7 @@ view: recommendations_export {
 
   }
 
- 
+
 
   dimension: primary_impact__cost_projection__cost__nanos {
 
@@ -232,7 +232,7 @@ view: recommendations_export {
 
   }
 
- 
+
 
   dimension: primary_impact__cost_projection__cost__units {
 
@@ -250,7 +250,7 @@ view: recommendations_export {
 
   }
 
- 
+
 
   dimension: primary_impact__cost_projection__duration__nanos {
 
@@ -276,7 +276,7 @@ view: recommendations_export {
 
   }
 
- 
+
 
   dimension: primary_impact__cost_projection__duration__seconds {
 
@@ -296,7 +296,7 @@ view: recommendations_export {
 
   }
 
- 
+
 
   dimension: primary_impact__security_projection__details_json {
 
@@ -314,7 +314,7 @@ view: recommendations_export {
 
   }
 
- 
+
 
   dimension: priority {
 
@@ -346,7 +346,7 @@ view: recommendations_export {
 
   }
 
- 
+
 
   dimension: recommendation_details {
 
@@ -358,7 +358,7 @@ view: recommendations_export {
 
   }
 
- 
+
 
   dimension: recommender {
 
@@ -402,7 +402,7 @@ view: recommendations_export {
 
   }
 
- 
+
 
   dimension: recommender_subtype {
 
@@ -426,7 +426,7 @@ view: recommendations_export {
 
   }
 
- 
+
 
   dimension: state {
 
@@ -482,7 +482,7 @@ view: recommendations_export {
 
   }
 
- 
+
 
   dimension: target_resources {
 
@@ -492,7 +492,7 @@ view: recommendations_export {
 
   }
 
- 
+
 
   dimension: service {
 
@@ -502,7 +502,7 @@ view: recommendations_export {
 
   }
 
- 
+
 
   dimension: category {
 
@@ -510,7 +510,7 @@ view: recommendations_export {
 
   }
 
- 
+
 
   dimension: project_name {
 
@@ -534,7 +534,7 @@ view: recommendations_export {
 
   }
 
- 
+
 
   measure: count {
 
@@ -544,7 +544,7 @@ view: recommendations_export {
 
   }
 
- 
+
 
   measure: total_savings {
 
@@ -552,7 +552,7 @@ view: recommendations_export {
 
     sql: -1*${primary_impact__cost_projection__cost__units} ;;
 
-    html: <a href="#drillmenu" target="_self">{{ currency_symbol._value }}{{ rendered_value }}</a>;;
+    #html: <a href="#drillmenu" target="_self">{{ currency_symbol._value }}{{ rendered_value }}</a>;;
 
     value_format: "#,##0.00"
 
@@ -562,7 +562,7 @@ view: recommendations_export {
 
 }
 
- 
+
 
 # view: recommendations_export__target_resources {
 
@@ -580,7 +580,7 @@ view: recommendations_export {
 
 #   }
 
- 
+
 
 #   dimension: project_name {
 
@@ -590,7 +590,7 @@ view: recommendations_export {
 
 # }
 
- 
+
 
 # view: recommendations_export__associated_insights {
 
@@ -608,6 +608,5 @@ view: recommendations_export {
 
 # }
 
- 
 
- 
+

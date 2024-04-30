@@ -1,5 +1,5 @@
 - dashboard: gcp_usage_deep_dive
-  title: GCP Usage Deep Dive V1
+  title: GCP Usage Deep Dive V2
   layout: newspaper
   preferred_viewer: dashboards-next
   description: ''
@@ -653,4 +653,3 @@
     explore: gcp_billing_export
     listens_to_filters: []
     field: pricing_mapping.marketplace_purchase
-

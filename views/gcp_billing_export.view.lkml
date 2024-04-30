@@ -203,7 +203,7 @@ view: gcp_billing_export {
     group_item_label: "ID"
     link: {
       label: "Usage Deep Dive"
-      #url: 
+      #url:
     }
   }
 
@@ -226,7 +226,7 @@ view: gcp_billing_export {
     }
     link: {
       label: "Usage Deep Dive"
-     # url: 
+     # url:
     }
   }
 
@@ -245,7 +245,7 @@ view: gcp_billing_export {
     group_item_label: "Description"
     link: {
       label: "{% if value contains 'BigQuery' %} BigQuery Deep Dive {% endif %}"
-      #url: 
+      #url:
     }
     link: {
       label: "{% if value contains 'Compute Engine' %} Compute Engine Deep Dive {% endif %}"
@@ -257,15 +257,15 @@ view: gcp_billing_export {
     }
     link: {
       label: "{% if value contains 'Networking' %} Networking Deep Dive {% endif %}"
-      #url: 
+      #url:
     }
     link: {
       label: "{% if value contains 'Kubernetes Engine' %} Kubernetes Engine Deep Dive {% endif %}"
-      #url: 
+      #url:
     }
     link: {
       label: "{% if value contains 'VMware Engine' %} VMware Engine Deep Dive {% endif %}"
-      #url: 
+      #url:
     }
   }
 
@@ -403,7 +403,7 @@ view: gcp_billing_export {
     type: sum
     sql: ${cost} ;;
     value_format: "#,##0.00"
-    html: <a href="#drillmenu" target="_self">{{ currency_symbol._value }}{{ rendered_value }}</a>;;
+    #html: <a href="#drillmenu" target="_self">{{ currency_symbol._value }}{{ rendered_value }}</a>;;
     drill_fields: [service__description,total_cost]
   }
 
@@ -412,7 +412,7 @@ view: gcp_billing_export {
      type: number
      sql: ${total_cost} - ${gcp_billing_export__credits.total_amount};;
     value_format: "#,##0.00"
-    html: <a href="#drillmenu" target="_self">{{ currency_symbol._value }}{{ rendered_value }}</a>;;
+  #  html: <a href="#drillmenu" target="_self">{{ currency_symbol._value }}{{ rendered_value }}</a>;;
     drill_fields: [total_cost, gcp_billing_export__credits.total_amount]
   }
 
@@ -490,7 +490,7 @@ dimension: test_resource_label {
       value_format_name: decimal_0
       filters: [gcp_billing_export__credits.id: "Committed Usage Discount: CPU"]
       sql: ${usage__amount}/86400 ;;
-    #dividing by the number of seconds in a day to conver the value to usage per day 
+    #dividing by the number of seconds in a day to conver the value to usage per day
     }
 
     measure: cud_amount_in_billing_units {
@@ -752,4 +752,3 @@ view: gcp_billing_export__project__labels {
     type: string
     sql: ${TABLE}.value ;;
   }}
-
