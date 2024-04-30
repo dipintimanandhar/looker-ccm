@@ -24,15 +24,15 @@ parameter: category {
   }
 }
 
-# dimension: category_selected {
-#   view_label: "Category Picker"
-# sql:
-#     {% if category._parameter_value == 'service_description' %} ${service__description}
-#     {% elsif category._parameter_value == 'project_id' %} ${project_id}
-#     {% elsif category._parameter_value == 'location__region' %} ${location__region}
-#     {% else %} ${service__description}
-#     {% endif %} ;;
-# }
+dimension: category_selected {
+  view_label: "Category Picker"
+sql:
+    {% if category._parameter_value == 'service_description' %} ${service__description}
+    {% elsif category._parameter_value == 'project__id' %} ${project__id}
+    {% elsif category._parameter_value == 'location__region' %} ${location__region}
+    {% else %} ${service__description}
+    {% endif %} ;;
+}
 
 parameter: date_selection {
   type: unquoted

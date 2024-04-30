@@ -222,8 +222,8 @@
     title_hidden: true
     listen:
       GCP Project ID: gcp_billing_export.project__id
-      App ID (Resource): gcp_billing_export.app_id_with_unallocated
-      Application Name: applications.name
+      #App ID (Resource): gcp_billing_export.app_id_with_unallocated
+     # Application Name: applications.name
       Usage Start Date: gcp_billing_export.usage_start_date
     row: 7
     col: 12

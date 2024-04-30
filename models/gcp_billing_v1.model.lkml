@@ -3,7 +3,7 @@ label: "Google Cloud Billing"
 persist_with: daily_datagroup
 include: "/datagroups/datagroup.lkml"
 include: "/views/*.view.lkml"
-
+include: "/dashboards/*.dashboard"
 explore: gcp_billing_export {
   label: "Billing"
   hidden: no

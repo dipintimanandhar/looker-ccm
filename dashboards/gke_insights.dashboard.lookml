@@ -286,8 +286,11 @@
     #model: gcp_billing
     explore: gcp_billing_export
     type: looker_grid
-    fields: [gke_grouping, gcp_billing_export.project__id, gcp_billing_export.app_id_with_unallocated,
-      gcp_billing_export.total_cost, gcp_billing_export.total_net_cost, gcp_billing_export.component_id]
+    fields: [gke_grouping, gcp_billing_export.project__id,
+      gcp_billing_export.total_cost, gcp_billing_export.total_net_cost]
+      #---original fields
+      # fields: [gke_grouping, gcp_billing_export.project__id, gcp_billing_export.app_id_with_unallocated,
+      # gcp_billing_export.total_cost, gcp_billing_export.total_net_cost, gcp_billing_export.component_id]
     filters:
       gcp_billing_export.service__description: Kubernetes Engine%
       gcp_billing_export.usage_start_month: 4 months ago for 4 months

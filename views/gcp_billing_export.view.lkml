@@ -687,7 +687,7 @@ view: gcp_billing_export__credits {
     label: "Total Credit Amount"
     type: sum
     value_format: "#,##0.00"
-    html: <a href="#drillmenu" target="_self">{{ gcp_billing_export.currency_symbol._value }}{{ rendered_value }}</a>;;
+    #html: <a href="#drillmenu" target="_self">{{ gcp_billing_export.currency_symbol._value }}{{ rendered_value }}</a>;;
     sql: -1*${amount} ;;
     drill_fields: [gcp_billing_export__credits.type,gcp_billing_export__credits.total_amount]
   }
@@ -696,7 +696,7 @@ view: gcp_billing_export__credits {
     view_label: "Credits"
     type: sum
     value_format: "#,##0.00"
-    html: <a href="#drillmenu" target="_self">{{ gcp_billing_export.currency_symbol._value }}{{ rendered_value }}</a>;;
+    #html: <a href="#drillmenu" target="_self">{{ gcp_billing_export.currency_symbol._value }}{{ rendered_value }}</a>;;
     sql: -1*${amount} ;;
     filters: [gcp_billing_export__credits.type: "Sustained Usage Discount"]
     drill_fields: [gcp_billing_export__credits.id,gcp_billing_export__credits.name,total_amount]
@@ -706,7 +706,7 @@ view: gcp_billing_export__credits {
     view_label: "Credits"
     type: sum
     value_format: "#,##0.00"
-    html: <a href="#drillmenu" target="_self">{{ gcp_billing_export.currency_symbol._value }}{{ rendered_value }}</a>;;
+    #html: <a href="#drillmenu" target="_self">{{ gcp_billing_export.currency_symbol._value }}{{ rendered_value }}</a>;;
     sql: -1*${amount} ;;
     filters: [gcp_billing_export__credits.type: "Committed Usage Discount, COMMITTED_USAGE_DISCOUNT_DOLLAR_BASE"]
     drill_fields: [gcp_billing_export__credits.id,gcp_billing_export__credits.name,total_amount]
@@ -716,7 +716,7 @@ view: gcp_billing_export__credits {
     view_label: "Credits"
     type: sum
     value_format: "#,##0.00"
-    html: <a href="#drillmenu" target="_self">{{ gcp_billing_export.currency_symbol._value }}{{ rendered_value }}</a>;;
+    #html: <a href="#drillmenu" target="_self">{{ gcp_billing_export.currency_symbol._value }}{{ rendered_value }}</a>;;
     sql: -1*${amount} ;;
     filters: [gcp_billing_export__credits.type: "Promotion"]
     drill_fields: [gcp_billing_export__credits.id,gcp_billing_export__credits.name,total_amount]

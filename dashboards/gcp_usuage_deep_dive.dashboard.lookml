@@ -317,8 +317,8 @@
     type: looker_pie
     fields: [gcp_billing_export.total_cost, gcp_billing_export.service__description]
     filters:
-      gcp_billing_export.period: Year
-      gcp_billing_export.period_selected: This Year to Date
+      #gcp_billing_export.period: Year
+      #gcp_billing_export.period_selected: This Year to Date
       gcp_billing_export.total_cost: ">25"
     sorts: [gcp_billing_export.total_cost desc]
     limit: 500
